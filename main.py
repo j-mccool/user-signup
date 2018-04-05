@@ -5,9 +5,9 @@ app = Flask(__name__)
 
 app.config['DEBUG'] = True
 
-@app.route("/welcome")
+@app.route("/welcome", methods=['POST'])
 def welcome():
-    return render_template('welcome.html')
+    return render_template('welcome.html', username = 'TEST')
 
 @app.route("/")
 def index():

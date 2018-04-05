@@ -9,16 +9,16 @@
         }
         form {
             margin: auto;
-            padding: 10px;
+            padding: 5px;
         }
         label span {
           display: inline-block;
-          width: 120px;
+          width: 10%;
           text-align: right;
         }
         #submit {
-            padding: 10px;
-            margin-left: 120px;
+            padding: 5px;
+            margin-left: 10%;
         }
     </style>
 </head>
@@ -27,30 +27,30 @@
     <h1>
         <a href="/">User-Signup</a>
     </h1>
-        <form action="/" method="post">
+        <form action="/welcome" method="post">
             <p>
-                <label for="name">
+                <label>
                     <span>Name: </span>
                 </label>
-                <input type="text" id="name" name="username">
+                <input type="text" id="username" name="username">
             </p>
             <p>
-                <label for="password">
+                <label>
                     <span>Password: </span>
                 </label>
-                <input type="password" id="pwd" name="password">
+                <input type="password" id="password" name="password">
             </p>
             <p>
-                <label for="password_confirm">
+                <label>
                     <span>Password (Confirm): </span>
                 </label>
-                <input type="password" id="pwd" name="password">
+                <input type="password" id="password_confirm" name="password_confirm">
             </p>
             <p>
-                <label for="mail">
+                <label>
                     <span>E-mail: </span>
                 </label>
-                <input type="email" id="mail" name="email">
+                <input type="text" id="email" name="email">
             </p>
         <div id="submit">
             <input type="submit" value="Submit" />
