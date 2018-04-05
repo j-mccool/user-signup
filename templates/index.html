@@ -32,25 +32,37 @@
                 <label>
                     <span>Name: </span>
                 </label>
-                <input type="text" id="username" name="username">
+                <input type="text" id="username" name="username" value='{{username}}'>
+                {% if u_error %}
+                <span class="error">{{u_error}}</span>
+                {% endif %}
             </p>
             <p>
                 <label>
                     <span>Password: </span>
                 </label>
                 <input type="password" id="password" name="password">
+                 {% if p_error %}
+                <span class="error">{{p_error}}</span>
+                {% endif %}
             </p>
             <p>
                 <label>
                     <span>Password (Confirm): </span>
                 </label>
                 <input type="password" id="password_confirm" name="password_confirm">
+                 {% if pc_error %}
+                <span class="error">{{pc_error}}</span>
+                {% endif %}
             </p>
             <p>
                 <label>
                     <span>E-mail: </span>
                 </label>
-                <input type="text" id="email" name="email">
+                <input type="text" id="email" name="email" value='{{email}}'>
+                 {% if e_error %}
+                <span class="error">{{e_error}}</span>
+                {% endif %}
             </p>
         <div id="submit">
             <input type="submit" value="Submit" />
