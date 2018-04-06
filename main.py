@@ -22,10 +22,27 @@ def welcome():
         u_error = "That's not a valid username. Value must not be null."
     if password == '':
         p_error = "Invalid password. Cannot be null."
+    if len(password) < 3:
+        p_error = "Invalid password. Must be between 3 and 20 characters, and cannot contain spaces."
+    elif len(password) > 20:
+        p_error = "Invalid password. Must be between 3 and 20 characters, and cannot contain spaces."
+    elif " " in password:
+        p_error = "Invalid password. Passwords cannot contain spaces."
     if password_confirm == '':
         pc_error = "Password confirmation must match password entered above. Please try again."
     if password_confirm != password:
         pc_error = "Password and Confirmation must match. Please try again."
+    if email:
+        if len(email) < 3:
+            e_error = "Email must be between 3 and 20 characters."
+        if len(email) > 20:
+            e_error = "Email must be between 3 and 20 characters."
+        if email.count(".") != 1:
+            e_error = "Email must contain a single \'.\' and a single \'@\'. Please re-enter."
+        elif email.count("@") !=1:
+            e_error = "Email must contain a single \'.\' and a single \'@\'. Please re-enter."
+        if " " in email:
+            e_error = "Email cannot contain a space. Please re-enter."
 
     if not u_error and not p_error and not pc_error and not e_error:
         return render_template('welcome.html', username = new_user)
