@@ -1,13 +1,7 @@
-<!doctype html>
-<html>
+{% extends "base.html" %} 
 
-    <body>
-        <h1>
-            <a href="/">Main</a>
-        </h1>
+{% block content %}
 
-        Welcome {{username}}!
+        <h2 id="welcome">Welcome {{username}}!</h2>
 
-    </body>
-
-</html>
+{% endblock %}

@@ -1,32 +1,7 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %} 
 
-<head>
-    <title>User-Signup</title>
-    <style type="text/css">
-        .error {
-            color: red;
-        }
-        form {
-            margin: auto;
-            padding: 5px;
-        }
-        label span {
-          display: inline-block;
-          width: 10%;
-          text-align: right;
-        }
-        #submit {
-            padding: 5px;
-            margin-left: 10%;
-        }
-    </style>
-</head>
+{% block content %}
 
-<body>
-    <h1>
-        <a href="/">User-Signup</a>
-    </h1>
         <form action="/welcome" method="post">
             <p>
                 <label>
@@ -69,7 +44,8 @@
         </div>
         </form>
         
-
+{% endblock %}
 </body>
 
 </html>
+
